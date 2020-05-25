@@ -5,3 +5,14 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
+
+body {
+    background: #92ce92;
+    color: #333;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 200px 1fr 2fr;
+    /* grid-template-rows: 100px 200px; */
+}
