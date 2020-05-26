@@ -13,15 +13,35 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 200px) 1fr 1fr;
-    /* grid-template-rows: 100px 200px; */
-    column-gap: 16px;
-    row-gap: 16px;
+  
 }
 
-.grid__element {
-    background: tomato;
-    padding: 20px;
-    color: #ffffff;
+.main {
+    display: grid;
+    grid-template-areas: "header header header"
+    "article . aside"
+    "footer footer footer";
+    grid-template-columns: 1fr 64px 200px;
+    column-gap: 16px;
+    row-gap: 16px;
+    grid-template-rows: 100px;
+}
 
+.header {
+    /* grid-area: header; */
+    background: hotpink;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    z-index: 2;
+}
+.article {
+    grid-area: article;
+}
+.aside {
+    grid-area: aside;
+}
+.footer {
+    grid-area: footer;
 }
