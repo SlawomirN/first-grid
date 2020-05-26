@@ -30,11 +30,15 @@ body {
 .header {
     /* grid-area: header; */
     background: hotpink;
-    grid-column-start: pierwsza;
+    /* grid-column-start: pierwsza;
     grid-column-end: span 3;
     grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row-end: 2; */
     /* z-index: 2; */
+    grid-area: 1 / pierwsza / 2 / span 3;
+    /* Powyżej zapis skrócony dla kolumny i wiersza: grid-row-start, grid-column-start, grid-row-end, grid-column-end */
+    /* Zapis skrócony dla kolumny: grid-column: druga / span 3; */
+    /* Zapis skrócony dla wiersza: grid-row: 1 / 2; */
 }
 .article {
     grid-area: article;
