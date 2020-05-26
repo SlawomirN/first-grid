@@ -21,7 +21,7 @@ body {
     grid-template-areas: "header header header"
     "article . aside"
     "footer footer footer";
-    grid-template-columns: 1fr 64px 200px;
+    grid-template-columns: [pierwsza] 1fr [druga] 64px [trzecia] 200px;
     column-gap: 16px;
     row-gap: 16px;
     grid-template-rows: 100px;
@@ -30,11 +30,11 @@ body {
 .header {
     /* grid-area: header; */
     background: hotpink;
-    grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-start: pierwsza;
+    grid-column-end: span 3;
     grid-row-start: 1;
-    grid-row-end: 3;
-    z-index: 2;
+    grid-row-end: 2;
+    /* z-index: 2; */
 }
 .article {
     grid-area: article;
